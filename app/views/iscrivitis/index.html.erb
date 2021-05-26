@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Iscrivitis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cognome</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Cellulare</th>
+      <th>Età</th>
+      <th>Richiesta</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @iscrivitis.each do |iscriviti| %>
+      <tr>
+        <td><%= iscriviti.cognome %></td>
+        <td><%= iscriviti.nome %></td>
+        <td><%= iscriviti.email %></td>
+        <td><%= iscriviti.cellulare %></td>
+        <td><%= iscriviti.età %></td>
+        <td><%= iscriviti.richiesta %></td>
+        <td><%= link_to 'Show', iscriviti %></td>
+        <td><%= link_to 'Edit', edit_iscriviti_path(iscriviti) %></td>
+        <td><%= link_to 'Destroy', iscriviti, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Iscriviti', new_iscriviti_path %>

@@ -1,0 +1,47 @@
+<%= form_with(model: iscriviti) do |form| %>
+  <% if iscriviti.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(iscriviti.errors.count, "error") %> prohibited this iscriviti from being saved:</h2>
+
+      <ul>
+        <% iscriviti.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cognome %>
+    <%= form.text_field :cognome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cellulare %>
+    <%= form.text_field :cellulare %>
+  </div>
+
+  <div class="field">
+    <%= form.label :età %>
+    <%= form.number_field :età %>
+  </div>
+
+  <div class="field">
+    <%= form.label :richiesta %>
+    <%= form.text_field :richiesta %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

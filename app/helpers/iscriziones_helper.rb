@@ -1,0 +1,2 @@
+module IscrizionesHelper
+end

@@ -1,0 +1,2 @@
+class Iscriviti < ApplicationRecord
+end
